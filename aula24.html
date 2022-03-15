@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo de HTML5 - CFB Cursos</title>
+    <style>
+        dialog
+        {
+            padding: 0;
+            border: 0;
+            border-radius: 7px;
+            box-shadow: 0 0 10px black;
+            flex-direction: column;
+        }
+        dialog::backdrop
+        {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .dialog-titulo
+        {
+            background-color: #eee;
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #aaa;
+            height: 40px;
+        }
+        .dialog-corpo
+        {
+            background-color: #fff;
+            padding: 7px;
+        }
+        .dialog-rodape
+        {
+            background-color: #fff;
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
+            padding: 7px;
+            border-bottom: 1px solid #aaa;
+        }
+        #btn-fechar
+        {
+            border: none;
+            border-radius: 7px;
+            padding: 7px;
+            cursor: pointer;
+            outline: none;
+        }
+        #btn-fechar:hover
+        {
+            background-color: #eee;
+        }
+    </style>
+    <script>
+        function fecharDialog()
+        {
+            document.getElementById("btn-dialog").innerHTML = "Abrir";
+            document.getElementById("d1").removeAttribute("open");
+        }
+        function abrirDialog()
+        {
+            document.getElementById("btn-dialog").innerHTML = "Fechar";
+            document.getElementById("d1").setAttribute("open", "");
+        }
+        function controlDialog(titulo, msg)
+        {
+            
+            if(document.getElementById("d1").open)
+            {
+                fecharDialog();
+            }
+            else
+            {
+                abrirDialog();
+                document.getElementById("titulo").innerHTML = titulo;
+                document.getElementById("msg1").innerHTML = msg;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+
+    <button onclick="controlDialog('Curso de HTML', 'Curso de HTML Completo e Profissional do Canal CFB Cursos')" id="btn-dialog">Abrir</button>
+
+    <button onclick="controlDialog('Teste', 'Teste realizado')" id="btn-dialog">Teste</button>
+
+    <dialog id="d1">
+        <div class="dialog-titulo">
+            <h3 id="titulo">Caixa de dialogo</h3>
+        </div>
+        <div class="dialog-corpo">
+            <p>Caixa de dialogo nativa em HTML5</p>
+            <p id="msg1">CFB Cursos / Curso HTML Completo e Profissional</p>
+        </div>
+        <div class="dialog-rodape">
+            <button id="btn-fechar" onclick="fecharDialog()">Fechar</button>
+        </div>
+    </dialog>
+</body>
+</html>

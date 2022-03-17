@@ -5,8 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso Completo de HTML5 - CFB Cursos - Aula 29</title>
+    <style>
+        *
+        {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        header
+        {
+            background:linear-gradient(60deg, rgb(0, 0, 0), rgb(40, 40, 40), rgb(60, 60, 60), rgb(80, 80, 80), rgb(100, 100, 100));
+            color: white;
+            width: 100%;
+            height: 60px;
+        }
+        .rodape-final
+        {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .article-rodape
+        {
+            border: 1px solid rgb(0, 0, 0);
+            width: 33.3%;
+            margin: 10px;
+        }
+        .img-rodape
+        {
+            width: inherit;
+        }
+    </style>
 </head>
 <body>
+    <header id="header">
+        <h1>Cabeçalho</h1>
+    </header>
     
+    <article>
+        <p>Corpo da pagina</p>
+        <footer>
+            <p><a href="https://www.cfbcursos.com.br">Link do site</a></p>
+        </footer>
+    </article>
+
+    <footer class="rodape-final">
+        <article class="article-rodape">
+            <img src="imgs/1.jpg" alt="" class="img-rodape">
+        </article>
+        <article class="article-rodape">
+            <p>CFB Cursos - Canal do youtube com cursos de informatica avançada</p>
+        </article>
+        <article class="article-rodape">
+            <p>www.youtube.com/cfbcursos</p>
+        </article>
+
+    </footer>
 </body>
 </html>

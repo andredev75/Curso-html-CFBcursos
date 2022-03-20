@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo de HTML5 - CFB Cursos - Aula 33</title>
+    <style>
+        form
+        {
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #eee;
+        }
+        .quebra
+        {
+            display: block;
+            
+        }
+        .espaço
+        {
+            margin-bottom: 15px;
+        }
+        .espaço_t
+        {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>  
+    <form name="f-cadastro" action="#" method="get">
+        <label for="">Username: </label>
+        <input class="espaço quebra" type="text" name="f_nome" value="" maxlength="20" size="25">
+        <label for="">password: </label>
+        <input class="espaço quebra" type="password" name="f_senha" maxlength="10" size="15">
+        <label class="quebra">Esportes favoritos: </label>
+        <input type="checkbox" name="f_fut" value="Futebol">Futebol
+        <input type="checkbox" name="f_bas" value="Basquete">Basquete
+        <input type="checkbox" name="f_nat" value="Natacao">Natação
+        <label class="quebra espaço_t">Possui carro? </label>
+        <input type="radio" name="f_carro" value="s" checked>Sim
+        <input type="radio" name="f_carro" value="n">Não
+
+        <input class="espaço_t quebra" type="submit" name="f_btn_enviar" value="Gravar">
+
+    </form>
+</body>
+</html>

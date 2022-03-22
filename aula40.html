@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo de HTML5 - CFB Cursos - Aula 40</title>
+    
+    <style>
+        form
+        {
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #eee;
+        }
+        .quebra
+        {
+            display: block;
+            
+        }
+        .espaço
+        {
+            margin-bottom: 15px;
+        }
+        .espaço_t
+        {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>  
+    <form name="f-cadastro" action="#" method="get">
+        
+        <input list="f_transportes" name="f_cor">
+        <datalist id="f_cores">
+            <option value="red">VERMELHO</option>
+            <option value="green">VERDE</option>
+            <option value="blue">AZUL</option>
+            <option value="yellow">AMARELO</option>
+            <option value="white">BRANCO</option>
+            <option value="bege">BEIGE</option>
+        </datalist>
+
+        <datalist id="f_transportes">
+            <option value="01">Carro</option>
+            <option value="02">Avião</option>
+            <option value="03">Navio</option>
+            <option value="04">Motocicleta</option>
+            
+        </datalist>
+        
+
+        <input class="espaço_t quebra" type="submit" name="f_btn_enviar" value="Enviar">
+
+    </form>
+</body>
+</html>

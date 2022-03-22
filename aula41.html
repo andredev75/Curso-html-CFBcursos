@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo de HTML5 - CFB Cursos - Aula 41</title>
+    
+    <style>
+        form
+        {
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #eee;
+        }
+        .quebra
+        {
+            display: block;
+            
+        }
+        .espaço
+        {
+            margin-bottom: 15px;
+        }
+        .espaço_t
+        {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>  
+    <form name="f-cadastro" action="#" method="get">
+        
+        <fieldset>
+            <legend>Dados 1:</legend>
+            <label for="f_nome">Nome:</label>
+            <input type="text" name="f_nome" id="f_nome" class="quebra">
+            <br>
+            
+            <label for="f_telefone">Telefone:</label>
+            <input type="tel" name="f_telefone" id="f_telefone" class="quebra">
+            <br>      
+        </fieldset>
+        <br>
+        <fieldset disabled>
+            <legend>Dados 2:</legend>
+
+            <label for="f_nome">Possui carro?</label><br>
+            <input type="radio" name="f_carro" id="f_carro" checked value="s">Sim
+            <br>
+            <input type="radio" name="f_carro" id="f_carro" value="n">Não
+            <br>
+            
+            <label for="f_nome">Possui casa própria?</label><br>
+            <input type="radio" name="f_casa" id="f_casa" value="s" checked>Sim
+            <br>
+            <input type="radio" name="f_casa" id="f_casa" value="n">Não
+            <br>    
+        </fieldset>
+
+        <input class="espaço_t quebra" type="submit" name="f_btn_enviar" value="Enviar">
+
+    </form>
+</body>
+</html>
